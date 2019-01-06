@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/admin-edithost.js"></script>
+</head>
+<body>
+	<div class="sub-nov">
+		&emsp;<a href="{:U('/')}">首页</a>&gt; <a href="{:U('/Admin')}">后台管理</a>&gt; <a href="#">修改域名</a>
+	</div>
+	<div class="content">
+		<form name="addFrom" id="addFrom" accept-charset="utf-8" action="__ROOT__/Admin/EditHost/editapp" method="post">
+		<input type="hidden" name="client" value="app">
+			<table class="table3">
+				<tbody>
+					<tr>
+						<th style="background: #e8e8e8" colspan="2">修改移动端跳转域名</th>
+					</tr>
+					<tr>
+						<th width="120px"><span class="require-red"></span>跳转域名：</th>
+						<td><input class="text-select" type="text" id="url" name="url" style="width: 100%;" value="{$url1}"></td>
+					</tr>
+					<tr>
+						<th colspan="2"><input type="submit" class="btn btn-primary btn100" value="修改" id="add"> <input type="reset" class="btn btn-primary btn100" value="重置"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<form name="addFrom" id="addFrom1" accept-charset="utf-8" action="__ROOT__/Admin/EditHost/editpc" method="post">
+		<input type="hidden" name="client" value="pc">
+			<table class="table3">
+				<tbody>
+					<tr>
+						<th style="background: #e8e8e8" colspan="2">修改PC端跳转域名</th>
+					</tr>
+					<tr>
+						<th width="120px"><span class="require-red"></span>跳转域名：</th>
+						<td><input class="text-select" type="text" id="url1" name="url" style="width: 100%;" value="{$url2}"></td>
+					</tr>
+					<tr>
+						<th colspan="2"><input type="submit" class="btn btn-primary btn100" value="修改" id="add1"> <input type="reset" class="btn btn-primary btn100" value="重置"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

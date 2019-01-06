@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/admin-proxy.js"></script>
+</head>
+<body>
+	<div class="sub-nov">
+		&emsp;<a href="{:U('/')}">首页</a>&gt; <a href="{:U('/Admin')}">后台管理</a>&gt; <a href="#">修改域名</a>
+	</div>
+	<div class="content">
+		<form name="addFrom" id="addFrom" accept-charset="utf-8" action="__ROOT__/Admin/Proxy/edit" method="post">
+			<table class="table3">
+				<tbody>
+					<tr>
+						<th style="background: #e8e8e8" colspan="2">修改代理服务器</th>
+					</tr>
+					<tr>
+						<th width="120px">代理地址：</th>
+						<td><input class="text-select" type="text" id="proxy" name="proxy" style="width: 100%;" value="{$proxy['proxy']}"></td>
+					</tr>
+					<tr>
+						<th width="120px">代理端口：</th>
+						<td><input class="text-select" type="text" id="port" name="port" size="20" value="{$proxy['port']}"></td>
+					</tr>
+					<tr>
+
+						<th>是否启用：</th>
+						<td>
+						<?php if($proxy['state']==0){ ?>
+							<input class="common-text" id="state" name="state" value="1" type="radio" >开启 
+							<input class="common-text" id="state" name="state" value="0" type="radio" checked="checked">关闭
+						<?php }else{ ?>
+							<input class="common-text" id="state" name="state" value="1" type="radio" checked="checked">开启 
+							<input class="common-text" id="state" name="state" value="0" type="radio">关闭
+						<?php } ?>	
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2"><input type="submit" class="btn btn-primary btn100" value="修改" id="add"> <input type="reset" class="btn btn-primary btn100" value="重置"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

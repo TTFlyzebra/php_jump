@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">	var ajaxurl = '{:U("/Admin/AdManager/del")}'</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/admin-admanager.js"></script>
+</head>
+<body>
+	<div class="sub-nov">
+		&emsp;<a href="{:U('/')}">首页</a>&gt;<a href="#">请假申请</a>
+	</div>
+	<div class="content">
+		<div class="result-wrap">
+		<table class="table3" width="100%">
+			<tbody align="right">
+				<tr style="background: #e8e8e8">
+					<th>广告图片</th>
+					<th>下载地址</th>
+					<th>执行操作</th>
+				</tr>
+				<foreach name='admanager' item='v'>
+				<tr>
+					<th><img src="{:U($v['imgurl'])}"></th>
+					<th><a href="{:U($v['appurl'])}">下载链接</a></th>
+					<th><a href="javascript:postdel('{$v.id}');"> 删除
+					</a></th>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+			<form action="{:U('/Admin/AdManager/add')}" method="post" id="addfrom" name="addfrom" enctype="multipart/form-data">
+				<table class="table3" width="100%">
+						<tr>
+							<th style="background: #e8e8e8" colspan="4">添加广告</th>
+						</tr>
+						<tr>
+							<th>广告图片：</th>
+							<td><input class="text-input" style="width: 45%;font-size:16px" name="file1" type="file" id="file1" accept=".jpg,.png,.apk,.ipa"></td>
+							<th>下载APP：</th>
+							<td><input class="text-input" style="width: 45%;font-size:16px" name="file2" type="file" id="file2" accept=".jpg,.png,.apk,.ipa"></td>
+						</tr>
+						<tr>
+							<th colspan="4"><input type="button" class="btn btn-primary btn200" value="添加广告" id="add"> <input type="reset" class="btn btn-primary btn200" value="重新填写"></th>
+						</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

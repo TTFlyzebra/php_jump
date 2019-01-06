@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Fly Zebra!!!</title>
+<link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet"
+	type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="__PUBLIC__/js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css"
+	media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript">	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }>
+</script>
+<meta name="keywords"
+	content="Your App Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndriodCompatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<!--Google Fonts-->
+<link href='http://fonts.useso.com/css?family=Quicksand:300,400,700'
+	rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="__PUBLIC__/js/move-top.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event) {
+			event.preventDefault();
+			$('html,body').animate({
+				scrollTop : $(this.hash).offset().top
+			}, 1000);
+		});
+	});
+</script>
+<!-- //end-smoth-scrolling -->
+<script src="__PUBLIC__/js/menu_jquery.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/css/flexslider.css"
+	type="text/css" media="screen" />
+</head>
+<body>
+	<!--header start here-->
+	<div class="banner">
+		<div class="header">
+			<div class="container">
+				<div class="header-main">
+					<div class="logo">
+							<img src="Public/images/logo1.png"/><h5><font color="#FFFFFF">ManBetX</font></h5>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--header end here-->
+	<!--app info-->
+	<div class="container">
+		<div class="app-info">
+			<div class="app-info-main">
+				<div class="app-row1">
+					<div class="col-md-4 app-info-grid app-gd1">
+						<a class="app-in-grd" href=""> <span
+							class="glyphicon glyphicon-phone" aria-hidden="true"> </span>
+							<h3>安卓APP下载</h3>
+							<p>ManBetX</p>
+						</a>
+					</div>
+					<div class="col-md-4 app-info-grid app-gd2">
+						<a class="app-in-grd" href="">
+							<span class="glyphicon glyphicon-apple" aria-hidden="true">
+							</span>
+							<h3>苹果APP下载</h3>
+							<p>ManBetX</p>
+						</a>
+					</div>
+					<div class="col-md-4 app-info-grid app-gd3">
+						<a class="app-in-grd" href="">
+							<span class="glyphicon glyphicon-cloud-upload" aria-hidden="true">
+							</span>
+							<h3>IOS越狱指南</h3>
+							<p>&nbsp;</p>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--clients start here-->
+
+	<!-- FlexSlider -->
+	<script defer src="__PUBLIC__/js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			SyntaxHighlighter.all();
+		});
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation : "slide",
+				start : function(slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<div class="copy-right-main">
+		<div class="container">
+			<div class="copy-right">
+				<p>Copyright &copy; ManBetX.</p>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					/*
+					var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear' 
+					};
+					 */
+
+					$().UItoTop({
+						easingType : 'easeOutQuart'
+					});
+
+				});
+			</script>
+			<a href="#" id="toTop" style="display: block;"> <span
+				id="toTopHover" style="opacity: 1;"> </span></a>
+		</div>
+	</div>
+</body>
+</html>
